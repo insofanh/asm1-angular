@@ -34,7 +34,7 @@ export class ProductListComponent {
 
   removeItem(id: any) {
     this.productService.deleteProduct(id).subscribe(() => {
-      console.log('delete thanh cong')
+      this.products=this.products.filter(data =>data.id !==id)
     })
   }
 }
